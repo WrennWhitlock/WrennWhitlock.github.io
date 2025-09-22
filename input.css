@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+.cite-ref {
+  color: #255cb7;
+  font-size: 90%;
+  text-decoration: none;
+}
+
+.cite-note {
+  font-size: 80%;
+}
+
+code {
+  font-family: Consolas, "courier new";
+  color: rgb(27, 26, 26);
+  background-color: #f8f7e8;
+  padding: 2px;
+  font-size: 105%;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #414559;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #c6d0f5;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ca9ee6;
+  color: #303446;
+}
+
+.topnav a.active {
+  background-color: #8672a0;
+  color: #c6d0f5;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/* Changes nav to hamburger style in portait mode */
+@media screen and (orientation: portrait) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (orientation: portrait) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
